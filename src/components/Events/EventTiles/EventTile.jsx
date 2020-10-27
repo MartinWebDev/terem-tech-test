@@ -13,9 +13,11 @@ const cx = classNames.bind(styles);
 const EventTile = ({ eventData: data, wide = false }) => {
     return (
         <div className={cx("wrapper", { wide })}>
-            <img src={data.img} alt={data.title} />
-            <span className={cx("title")}>{/* Icon should be here, but do not have one */}{data.title}</span>
-            <span className={cx("location")}>{/* Icon should be here, but do not have one */}{data.location}</span>
+            <div className={cx("tile")}>
+                <img src={data.img} alt={data.title} />
+                <span className={cx("title")}>{/* Icon should be here, but do not have one */}{data.title}</span>
+                <span className={cx("location")}>{/* Icon should be here, but do not have one */}{data.location}</span>
+            </div>
         </div>
     );
 };

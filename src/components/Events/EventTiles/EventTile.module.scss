@@ -2,27 +2,30 @@
     width: 200px;
     background-color: var(--bgPrimary);
     border: 1px solid var(--bgCard);
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    > img {
-        height: 150px;
-        width: 100%;
-        object-fit: fill;
-        margin-bottom: 8px;
-    }
-
-    > .title {
-        font-weight: 700;
-        padding: 4px 8px;
-    }
-
-    > .location {
-        padding: 4px 8px;
-    }
-
+    
     &.wide {
         width: 300px;
+    }
+
+    > .tile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > img {
+            height: 150px;
+            width: 100%;
+            object-fit: fill;
+            margin-bottom: 8px;
+        }
+
+        > .title {
+            font-weight: 700;
+            padding: 4px 8px;
+        }
+
+        > .location {
+            padding: 4px 8px;
+        }
     }
 }

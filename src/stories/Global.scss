@@ -1,0 +1,43 @@
+// Note: Good enough for now. This was a new and unique issue I'd not encountered before so didn't have time to look into it fully
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+$bgLight: #e1e1e1;
+$cardBgLight: #ffffff;
+$fontPrimaryLight: #2f516d;
+$fontSecondaryLight: #899bb2;
+$carouselControlLight: #444444;
+$errorPrimaryLight: #f55;
+
+// Additional normalisation
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+
+    #root {
+        height: 100%;
+    }
+}
+
+// Reusable variables for light theme
+:root {
+    --fontPrimary: #{$fontPrimaryLight};
+    --fontSecondary: #{$fontSecondaryLight};
+    --bgPrimary: #{$bgLight};
+    --bgCard: #{$cardBgLight};
+    --errorPrimary: #{$errorPrimaryLight};
+}
+
+#AppRoot {
+    min-height: 100%;
+    background-color: $bgLight;
+    color: $fontPrimaryLight;
+}
