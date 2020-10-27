@@ -7,7 +7,11 @@ const cx = classNames.bind(styles);
 // this is the one component in my life that I have never managed to replicate with any success.
 const Carousel = ({ children }) => {
     return (
-        <div className={cx("wrapper")}>{children}</div>
+        <div className={cx("wrapper")}>
+            <div className={cx("prev")}></div>
+            <div className={cx("children")}>{children}</div>
+            <div className={cx("next")}></div>
+        </div>
     );
 };
 

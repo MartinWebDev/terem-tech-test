@@ -2,15 +2,71 @@
 // NOTE: I have a good theory on the behaviour and would love to discuss with you, but it's such a misplaced component. 
 // It doesn't fit well with react, it doesn't fit well with other frameworks, it doesn't work at all without javascript, old jquery ones are ugly. Haha.
 // I would rather keep this as a technical exercise rather than a demonstration of how I would write unusual css so hopefully this can be forgiven and we can discuss later.
+@mixin controlsCommon {
+    // Common positioning
+    width: 80px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #cccccccc;
+
+    // Create common props for chevrons
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+        content: ' ';
+        width: 20px;
+        height: 20px;
+    }
+
+    &.hidden {
+        display: none;
+    }
+}
+
 .wrapper {
-    display: block;
-    width: 2500px;
-    // overflow-x: scroll;
-    // flex-direction: row;
-    // justify-content: space-between;
-    // gap: 8px;
-    
-    div {
-        margin-right: 8px;
+    position: relative;
+
+    .children {
+        white-space: nowrap;
+        overflow-x: auto;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        
+        // We do not want to force developers to use div, or span, or list items, etc, so make sure to apply this style to any child, but only first level!
+        > * {
+            display: inline-block;
+        }
+    }
+
+    .prev {
+        @include controlsCommon();
+        left: 0;
+
+        &::after {
+            border-top: 5px solid #444;
+            border-left: 5px solid #444;
+            border-top-left-radius: 4px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    .next {
+        @include controlsCommon();
+        right: 0;
+
+        &::after {
+            border-top: 5px solid #444;
+            border-right: 5px solid #444;
+            border-top-right-radius: 4px;
+            transform: rotate(45deg);
+        }
     }
 }
