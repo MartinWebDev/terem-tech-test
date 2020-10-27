@@ -1,3 +1,14 @@
+# IMPROVEMENTS - WORK IN PROGRESS
+In order to keep this untouched, I have created a new branch with some work in progress on improving parts I wasn't happy with.
+Find it here: [feature/component-library](https://github.com/MartinWebDev/terem-tech-test/tree/feature/component-library)
+I decided to add storybook in there as I find this a good way to easily implement a sturdy component library without being in context of the app. 
+I often find developing such items in context of an app can be distracting and therefore the components will not be written as well as they could be. 
+I like storybook as a means of "unit" testing components to ensure they work as they should regardless of context.
+
+```
+yarn/npm run storybook
+```
+
 # Component design
 Whenever I look at a layout like this, I try to first break down the design into the main components I can clearly see. 
 In this case, I could see the search filter box, then 2 similar looking "event lists" with a header, then some sort of list.
