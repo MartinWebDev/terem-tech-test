@@ -1,0 +1,28 @@
+@import "./styles/variables.scss";
+
+// Reusable variables for light theme
+:root {
+    --fontPrimary: #{$fontPrimaryLight};
+    --fontSecondary: #{$fontSecondaryLight};
+    --bgPrimary: #{$bgLight};
+    --bgCard: #{$cardBgLight};
+    --errorPrimary: #{$errorPrimaryLight};
+}
+
+#AppRoot {
+    min-height: 100%;
+    background-color: $bgLight;
+    color: $fontPrimaryLight;
+
+    &.dark-mode {
+        // Reusable variables for dark theme
+        --fontPrimary: #{$fontPrimaryLight};
+        --fontSecondary: #{$fontSecondaryLight};
+        --bgPrimary: #{$bgDark};
+        --bgCard: #{$cardBgDark};
+        --errorPrimary: #{$errorPrimaryDark};
+
+        background-color: $bgDark;
+        color: $fontPrimaryDark;
+    }
+}

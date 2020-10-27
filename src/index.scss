@@ -1,0 +1,21 @@
+// New feature to react-scripts. I like this as I like the normalize library, this makes it a lot easier to include :)
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+// Additional normalisation
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+
+    #root {
+        height: 100%;
+    }
+}

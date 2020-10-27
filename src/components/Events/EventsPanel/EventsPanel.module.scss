@@ -1,0 +1,28 @@
+.wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 40px;
+    display: grid;
+    grid-template-areas:
+        "search additional"
+        "events events"
+    ;
+    grid-gap: 12px;
+    grid-template-columns: 1fr auto;
+
+    .search {
+        grid-area: search;
+    }
+
+    .additionalChildren {
+        grid-area: additional;
+    }
+
+    .events {
+        grid-area: events;
+        background-color: var(--bgCard);
+        border: 1px solid var(--bgPrimary);
+        padding: 12px;
+    }
+}

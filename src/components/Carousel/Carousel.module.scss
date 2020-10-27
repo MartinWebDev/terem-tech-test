@@ -1,0 +1,16 @@
+// TODO: I absolutely hate carousels. In my >10 years web development, I have never, EVER, managed to write a good one!
+// NOTE: I have a good theory on the behaviour and would love to discuss with you, but it's such a misplaced component. 
+// It doesn't fit well with react, it doesn't fit well with other frameworks, it doesn't work at all without javascript, old jquery ones are ugly. Haha.
+// I would rather keep this as a technical exercise rather than a demonstration of how I would write unusual css so hopefully this can be forgiven and we can discuss later.
+.wrapper {
+    display: block;
+    width: 2500px;
+    // overflow-x: scroll;
+    // flex-direction: row;
+    // justify-content: space-between;
+    // gap: 8px;
+    
+    div {
+        margin-right: 8px;
+    }
+}

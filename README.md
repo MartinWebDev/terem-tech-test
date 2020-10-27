@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Component design
+Whenever I look at a layout like this, I try to first break down the design into the main components I can clearly see. 
+In this case, I could see the search filter box, then 2 similar looking "event lists" with a header, then some sort of list.
+From there I could then break those down further and try to analyse the differences. Primarily that one is inside a carousel, the other is not. 
+Applying the filter at this stage was less of a concern as this can be easily added later. The design was the tricky part first. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Since the tiles inside where basically the same, but with different width, I need to ensure DRY principles here and ensure there was a way to externally control the width,
+but use the same component for both. Also see my NOTE's and TODO's throughout the app for more info on how I wanted to approach this, or how I would improve a revision.
 
-## Available Scripts
+Honestly, I wish I could have started over. I tried to conceptualise many of the components seen in the design, but I progressed through
+I thought of other ways I would have approached them, but due to time constraints could not go back to refactor.\
+As a result, there are a bit of a mix of techniques here I am not 100% happy with, though I hope it at least demonstrates my multiple possible thought processes. 
 
-In the project directory, you can run:
+I would have loved to have done more too, such as a more viable component library, and incorporated testing,
+but there simply isn't enough time in 4 hours to do everything I would like to demo.\
+I would rather discuss with you the sort of things I would test for as well as my general thoughts on testing in visual frameworks such as react. 
 
-### `yarn start`
+# Problems
+## Carousel
+This test has instantly stumbled across my biggest failing point in web design... The dreaded carousel.
+In my +10 years in the job, I have never been good at these. I have never been able to implement a good one that works well in any framework or with any library
+and pre-made ones such as the old ones from jquery are normally lacking in something. Either functionality or customisation.
+As such, I haven't been able to include a working carousel here. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I have theories though. I know I can measure the width of boxes, and measure the width of the whole thing, then using javascript boundary measuring, can implement a nice sliding effect. 
+But the biggest issue with this is that realistically you should keep that behaviour in a uncontrolled component, which then brings up the issue of binding data well between a controlled and an uncontrolled component.\
+Happy to discuss methods to achieve this. 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Trying to do too much
+I will freely admit this is my biggest weakness. I try to do too much, especially with these tech tests. 
+Any time I get one I always try to add more than necessary, or try a brand new technique I've never tried before, and I cannot lie, the quality can suffer as a result.\
+This is definitely the case here. There are items in this test that I feel I could have done better, but due to trying these ideas I do not really have time to go back and refactor.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+As such I would love to discuss, if you feel the need to, what I personally would consider my stronger or weaker points in this tech test.
