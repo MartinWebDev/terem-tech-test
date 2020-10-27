@@ -9,25 +9,6 @@ $fontSecondaryLight: #899bb2;
 $carouselControlLight: #444444;
 $errorPrimaryLight: #f55;
 
-// Additional normalisation
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
-
-    #root {
-        height: 100%;
-    }
-}
-
-// Reusable variables for light theme
 :root {
     --fontPrimary: #{$fontPrimaryLight};
     --fontSecondary: #{$fontSecondaryLight};
@@ -36,8 +17,18 @@ body {
     --errorPrimary: #{$errorPrimaryLight};
 }
 
-#AppRoot {
-    min-height: 100%;
-    background-color: $bgLight;
+// Additional normalisation
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    // background-color: $bgLight;
     color: $fontPrimaryLight;
+
+    #root {
+        height: 100%;
+    }
 }

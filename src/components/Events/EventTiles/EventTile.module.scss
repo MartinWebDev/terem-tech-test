@@ -19,13 +19,24 @@
             margin-bottom: 8px;
         }
 
-        > .title {
-            font-weight: 700;
-            padding: 4px 8px;
-        }
+        > .data {
+            padding-bottom: 8px;
+            display: flex;
+            flex-direction: column;
 
-        > .location {
-            padding: 4px 8px;
+            > .title {
+                font-weight: 700;
+                padding: 4px 8px;
+            }
+
+            > .location {
+                padding: 4px 8px;
+
+                > img {
+                    width: 16px;
+                    vertical-align: middle;
+                }
+            }
         }
     }
 }

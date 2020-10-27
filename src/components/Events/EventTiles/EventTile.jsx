@@ -1,6 +1,8 @@
 import styles from './EventTile.module.scss';
 import classNames from 'classnames/bind';
 
+import locationIcon from "./icons8-marker-50.png";
+
 const cx = classNames.bind(styles);
 
 // I tried to include a base component style system as described by the airbnb team at react-conf,
@@ -15,8 +17,10 @@ const EventTile = ({ eventData: data, wide = false }) => {
         <div className={cx("wrapper", { wide })}>
             <div className={cx("tile")}>
                 <img src={data.img} alt={data.title} />
-                <span className={cx("title")}>{/* Icon should be here, but do not have one */}{data.title}</span>
-                <span className={cx("location")}>{/* Icon should be here, but do not have one */}{data.location}</span>
+                <div className={cx("data")}>
+                    <span className={cx("title")}>{data.title}</span>
+                    <span className={cx("location")}><img src={locationIcon} alt="Location" />{data.location}</span>
+                </div>
             </div>
         </div>
     );
