@@ -2,6 +2,10 @@
     width: 200px;
     background-color: var(--bgPrimary);
     border: 1px solid var(--bgCard);
+
+    &:not(:last-child) {
+        margin-right: 12px;
+    }
     
     &.wide {
         width: 300px;
