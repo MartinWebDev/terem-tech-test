@@ -9,7 +9,8 @@ import Carousel from "../../Carousel/Carousel";
 
 const cx = classNames.bind(styles);
 
-// TODO: The only issue with this is the lack of caching of images. Cannot solve with memo in this function, though can probably memo inside the individual cards, but lacked time to experiment
+// TODO: The only issue with this is the lack of caching of images.
+// Cannot solve with memo in this function, though can probably memo inside the individual cards, but lacked time to experiment
 const PopularEvents = ({ eventList, loading, filterText = "" }) => {
     const filterFunc = (item) => {
         // Always early exit functions

@@ -15,6 +15,9 @@ I would have loved to have done more too, such as a more viable component librar
 but there simply isn't enough time in 4 hours to do everything I would like to demo.\
 I would rather discuss with you the sort of things I would test for as well as my general thoughts on testing in visual frameworks such as react. 
 
+# React stuff
+I tried to include a bit of everything here, so you'll find at least 1 example of a custom made hook, multiple uses of the built in hooks, example of HOC, as well as other concepts.
+
 # Problems
 ## Carousel
 This test has instantly stumbled across my biggest failing point in web design... The dreaded carousel.
